@@ -1,0 +1,90 @@
+.GamePage__board {
+	border: 2px solid gray;
+}
+
+.GamePage__board-cell {
+	width: 9vw;
+	height: 9vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.GamePage__cell-value {
+	position: relative;
+	top: -9vw;
+	width: 9vw;
+	height: 9vw;
+	font-size: 6vw;
+	flex-shrink: 0;
+	background: none;
+	text-align: center;
+	border: 1px solid gray;
+	color: blue;
+}
+
+.default {
+	color: black;
+}
+
+.conflict {
+	color: red;
+}
+
+.select {
+	border: 2px solid red;
+}
+
+.GamePage__memo {
+	width: 3vw;
+	height: 3vw;
+	font-size: 3vw;
+}
+
+.GamePage__memo-btn {
+	margin: 10px;
+	border: 1px solid blue;
+	background-color: white;
+	color: blue;
+}
+
+.mode-on {
+	background-color: blue;
+	color: white;
+}
+
+.GamePage__cell-value:focus,
+.GamePage__memo-btn:focus {
+	outline: none;
+}
+
+.GamePage__board-row:nth-child(3),
+.GamePage__board-row:nth-child(6) {
+	border-bottom: 2px solid gray;
+}
+
+.GamePage__board-cell:nth-child(3),
+.GamePage__board-cell:nth-child(6) {
+	border-right: 2px solid gray;
+}
+
+@media screen and (min-width: 660px) {
+	.GamePage__board-cell {
+		width: 60px;
+		height: 60px;
+	}
+	
+	.GamePage__cell-value {
+		top: -60px;
+		width: 60px;
+		height: 60px;
+		font-size: 40px;
+	}
+	
+	.GamePage__memo {
+		width: 20px;
+		height: 20px;
+		font-size: 18px;
+	}
+}
