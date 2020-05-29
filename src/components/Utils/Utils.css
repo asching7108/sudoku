@@ -1,0 +1,49 @@
+.Button {
+	border-radius: 20px;
+	margin: 5px;
+	min-width: 90px;
+	padding: 6px 16px;
+	font-size: 1em;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.Input {
+	border: 1px solid #FFF;
+	display: block;
+	font-size: 1.1em;
+	margin-bottom: 10px;
+	padding: 10px;
+	text-align: left;
+	width: 100%;
+	border-radius: 4px;
+}
+
+.Required {
+	color: #CA1551;
+	font-family: Arial;
+	font-weight: bold;
+}
+
+.LinkButton {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	border: 1px solid lightgray;
+	background-color: white;
+	border-radius: 20px;
+}
+
+@media screen and (min-width: 600px) {
+	.Button {
+		min-width: 110px;
+		padding: 8px 22px;
+		font-size: 1.1em;
+	}
+}

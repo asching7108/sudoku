@@ -211,6 +211,9 @@ export default class GamePage extends Component {
 					memo
 				</button>
 				{this.renderDigits()}
+				{memoMode && (
+					<div className='GamePage__note'>Memo mode: add memos of numbers</div>
+				)}
 				{!numEmptyCells && !numWrongCells && (
 					<div>You win!</div>
 				)}

@@ -5,10 +5,7 @@
 .GamePage__board-cell {
 	width: 9vw;
 	height: 9vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: flex-start;
+	background-color: yellow;
 }
 
 .GamePage__cell-value {
@@ -17,6 +14,8 @@
 	width: 9vw;
 	height: 9vw;
 	font-size: 6vw;
+	-webkit-flex-shrink: 0;
+	-moz-flex-shrink: 0;
 	flex-shrink: 0;
 	background: none;
 	text-align: center;
@@ -52,6 +51,11 @@
 .mode-on {
 	background-color: blue;
 	color: white;
+}
+
+.GamePage__note {
+	margin: 10px;
+	color: gray;
 }
 
 .GamePage__cell-value:focus,

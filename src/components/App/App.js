@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
 import HomePage from '../../pages/HomePage/HomePage';
+import LoginPage from '../../pages/LoginPage/LoginPage';
+import RegisterPage from '../../pages/RegisterPage';
 import NewGamePage from '../../pages/NewGamePage/NewGamePage';
 import ArchivesPage from '../../pages/ArchivesPage/ArchivesPage';
 import GamePage from '../../pages/GamePage/GamePage';
@@ -36,6 +38,14 @@ class App extends Component {
 							exact
 							path='/'
 							component={HomePage}
+						/>
+						<Route
+							path='/signin'
+							component={LoginPage}
+						/>
+						<Route
+							path='/signup'
+							component={RegisterPage}
 						/>
 						<Route
 							path='/new'
