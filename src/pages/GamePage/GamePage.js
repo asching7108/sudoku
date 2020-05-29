@@ -1,31 +1,38 @@
 import React, { Component } from 'react';
-import TEST_DATA from '../../testData.js';
+import RecordsApiService from '../../services/records-api-service';
 import './GamePage.css';
 
 export default class GamePage extends Component {
 	constructor(props) {
 		super(props);
-		const emptyPuzzle = Array(81).fill({
+		const emptySnapshot = Array(81).fill({
 			is_default: false,
-			defValue: '',
+			def_value: '',
 			value: '',
 			memos: Array(9).fill(false)
 		});
 		this.state = {
 			select: null,
 			memoMode: false,
-			numEmptyCells: 81,
-			numWrongCells: 0,
-			...emptyPuzzle
+			num_empty_cells: 81,
+			num_wrong_cells: 0,
+			error: null,
+			...emptySnapshot
 		};
 	}
 
 	componentDidMount() {
-		this.setState({
-			numEmptyCells: TEST_DATA.numEmptyCells,
-			numWrongCells: TEST_DATA.numWrongCells,
-			...TEST_DATA.puzzle
-		});
+		RecordsApiService.getRecordById(this.props.match.params.record_id)
+			.then(res => {
+				this.setState({
+					num_empty_cells: res.record.num_empty_cells,
+					num_wrong_cells: res.record.num_wrong_cells,
+					...res.snapshot
+				});
+			})
+			.catch(res => {
+				this.setState({ error: res.error });
+			});
 		document.addEventListener('keydown', this.onPressKeyboardDigit, false);
 		document.addEventListener('click', this.onClickElsewhere, true);
 	}
@@ -63,14 +70,14 @@ export default class GamePage extends Component {
 			if (!memoMode) return '';
 			return (i === value - 1) ? !m : m;
 		});
-		this.updateNumEmptyCells(select, newValue);
-		this.updateNumWrongCells(select, newValue);
+		this.updatenum_empty_cells(select, newValue);
+		this.updatenum_wrong_cells(select, newValue);
 		const has_conflict = this.validate(select, newValue, null);
 
 		this.setState({
 			[select]: {
 				is_default: cell.is_default,
-				defValue: cell.defValue,
+				def_value: cell.def_value,
 				value: newValue,
 				memos: newMemos,
 				has_conflict
@@ -78,29 +85,29 @@ export default class GamePage extends Component {
 		})
 	}
 
-	updateNumEmptyCells(cellNo, newValue) {
+	updatenum_empty_cells(cellNo, newValue) {
 		const cell = this.state[cellNo];
 		let numChange = 0;
 		if (!cell.value && newValue) numChange--;
 		else if (cell.value && !newValue) numChange++;
 		this.setState({
-			numEmptyCells: this.state.numEmptyCells + numChange
+			num_empty_cells: this.state.num_empty_cells + numChange
 		});
 	}
 
-	updateNumWrongCells(cellNo, newValue) {
+	updatenum_wrong_cells(cellNo, newValue) {
 		const cell = this.state[cellNo];
 		let numChange = 0;
-		if (cell.value && cell.value !== cell.defValue && 
-			(!newValue || newValue === cell.defValue)) {
+		if (cell.value && cell.value !== cell.def_value && 
+			(!newValue || newValue === cell.def_value)) {
 				numChange--;
 		}
-		else if (newValue && newValue !== cell.defValue && 
-			(!cell.value || cell.value === cell.defValue)) {
+		else if (newValue && newValue !== cell.def_value && 
+			(!cell.value || cell.value === cell.def_value)) {
 				numChange++;
 		}
 		this.setState({
-			numWrongCells: this.state.numWrongCells + numChange
+			num_wrong_cells: this.state.num_wrong_cells + numChange
 		});
 	}
 
@@ -159,7 +166,7 @@ export default class GamePage extends Component {
 		if (state[cell].is_default) cellValueClass += ' default';
 		if (state[cell].has_conflict) cellValueClass += ' conflict';
 		if (select === cell) cellValueClass += ' select';
-
+		
 		return (
 			<div className='GamePage__board-cell' key={`cell-${cell}`}>
 				{[...Array(3)].map((_, i) => 
@@ -199,7 +206,7 @@ export default class GamePage extends Component {
 	}
 
 	render() {
-		const { memoMode, numEmptyCells, numWrongCells } = this.state;
+		const { memoMode, num_empty_cells, num_wrong_cells } = this.state;
 
 		let memoClass = 'GamePage__memo-btn';
 		if (memoMode) memoClass += ' mode-on';
@@ -214,7 +221,7 @@ export default class GamePage extends Component {
 				{memoMode && (
 					<div className='GamePage__note'>Memo mode: add memos of numbers</div>
 				)}
-				{!numEmptyCells && !numWrongCells && (
+				{!num_empty_cells && !num_wrong_cells && (
 					<div>You win!</div>
 				)}
 			</section>
