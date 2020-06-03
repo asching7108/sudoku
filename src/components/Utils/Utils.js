@@ -27,3 +27,11 @@ export function LinkButton({ className, ...props }) {
 		<Link className={['LinkButton Button', className].join(' ')} {...props} />
 	);
 }
+
+export function ButtonsDiv({ className, ...props }) {
+	return (
+		<div className={['ButtonsDiv', className].join(' ')} {...props}>
+			{props.children}
+		</div>
+	);
+}

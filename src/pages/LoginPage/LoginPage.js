@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SudokuContext from '../../contexts/SudokuContext';
 import LoginForm from '../../components/LoginForm/LoginForm';
 import { LinkButton } from '../../components/Utils/Utils';
 import './LoginPage.css';
@@ -7,12 +6,9 @@ import './LoginPage.css';
 export default class LoginPage extends Component {
 	static defaultProps = { location: {} };
 
-	static contextType = SudokuContext;
-
 	handleLoginSuccess = () => {
 		const { location, history } = this.props;
 		const dest = (location.state || {}).from || '/';
-		this.context.setAuthState(true);
 		history.push(dest);
 	}
 

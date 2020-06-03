@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import SudokuContext from '../contexts/SudokuContext';
 import RegisterForm from '../components/RegisterForm/RegisterForm';
 
 export default class RegisterPage extends Component {
-	static contextType = SudokuContext;
-
 	handleRegisterSuccess = () => {
 		const { history } = this.props;
-		this.context.setAuthState(true);
 		history.push('/');
 	}
 

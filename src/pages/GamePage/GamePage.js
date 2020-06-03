@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RecordsApiService from '../../services/records-api-service';
+import { ButtonsDiv } from '../../components/Utils/Utils';
 import './GamePage.css';
 
 export default class GamePage extends Component {
@@ -7,8 +8,9 @@ export default class GamePage extends Component {
 		super(props);
 		const emptySnapshot = Array(81).fill({
 			is_default: false,
-			def_value: '',
-			value: '',
+			def_value: null,
+			value: null,
+			has_conflict: false,
 			memos: Array(9).fill(false)
 		});
 		this.state = {
@@ -16,6 +18,8 @@ export default class GamePage extends Component {
 			memoMode: false,
 			num_empty_cells: 81,
 			num_wrong_cells: 0,
+			step_id: null,
+			max_step_id: null,
 			error: null,
 			...emptySnapshot
 		};
@@ -24,11 +28,8 @@ export default class GamePage extends Component {
 	componentDidMount() {
 		RecordsApiService.getRecordById(this.props.match.params.record_id)
 			.then(res => {
-				this.setState({
-					num_empty_cells: res.record.num_empty_cells,
-					num_wrong_cells: res.record.num_wrong_cells,
-					...res.snapshot
-				});
+				this.updateStateRecord(res.record);
+				this.setState({ ...res.snapshot });	// faster than calling updateStateCells
 			})
 			.catch(res => {
 				this.setState({ error: res.error });
@@ -43,12 +44,14 @@ export default class GamePage extends Component {
 	}
 
 	onPressKeyboardDigit = e => {
+		// gets keyboard input number 1 to 9
 		if (e.keyCode >= 49 && e.keyCode <= 57) {
 			this.onClickDigit(e.keyCode - 48);
 		}
 	}
 
 	onClickElsewhere = e => {
+		// removes select on cell
 		if (!e.target.closest('.GamePage__board') && !e.target.closest('button')) {
 			this.setState({ select: null });
 		}
@@ -59,87 +62,110 @@ export default class GamePage extends Component {
 	onClickMemo() { this.setState(state => ({ memoMode: !state.memoMode })); }
 
 	onClickDigit(value) {
-		
-		const { select, memoMode } = this.state;
+		const { select, step_id, memoMode, ...state } = this.state;
 
-		if (select == null || this.state[select].is_default) return;
+		if (select == null || state[select].is_default) return;
 
-		const cell = this.state[select];
-		const newValue = memoMode || value === cell.value ? '' : value;
+		const cell = state[select];
+
+		// stores current cell values
+		const steps = [
+			{
+				cell_id: select,
+				record_id: this.props.match.params.record_id,
+				step_type: 'BEFORE',
+				value: cell.value,
+				has_conflict: cell.has_conflict,
+				memos: cell.memos
+			}
+		];
+
+		const newValue = memoMode || value === cell.value ? null : value;
 		const newMemos = cell.memos.map((m, i) => {
-			if (!memoMode) return '';
+			if (!memoMode) return false;
 			return (i === value - 1) ? !m : m;
 		});
-		this.updatenum_empty_cells(select, newValue);
-		this.updatenum_wrong_cells(select, newValue);
-		const has_conflict = this.validate(select, newValue, null);
 
-		this.setState({
-			[select]: {
-				is_default: cell.is_default,
-				def_value: cell.def_value,
-				value: newValue,
-				memos: newMemos,
-				has_conflict
-			}
-		})
+		// stores updated cell values
+		steps.push({
+			cell_id: select,
+			record_id: steps[0].record_id,
+			step_type: 'AFTER',
+			value: newValue,
+			has_conflict: steps[0].has_conflict,	// not updated
+			memos: newMemos
+		});
+
+		RecordsApiService.postRecordStep(
+			this.props.match.params.record_id,
+			steps
+		)
+			.then(res => {
+				this.updateStateRecord(res.record);
+				this.updateStateCells(res.cells);
+			})
+			.catch(res => {
+				this.setState({ error: res.error });
+			});
 	}
 
-	updatenum_empty_cells(cellNo, newValue) {
-		const cell = this.state[cellNo];
-		let numChange = 0;
-		if (!cell.value && newValue) numChange--;
-		else if (cell.value && !newValue) numChange++;
+	onClickUndo() {
+		if (!this.state.step_id) return;
+		RecordsApiService.updateRecordStep(
+			this.props.match.params.record_id,
+			'UNDO'
+		)
+			.then(res => {
+				this.updateStateRecord(res.record);
+				this.updateStateCells(res.cells);
+			})
+			.catch(res => {
+				this.setState({ error: res.error });
+			});
+	}
+
+	onClickRedo() {
+		if (this.state.step_id ===this.state.max_step_id) return;
+		RecordsApiService.updateRecordStep(
+			this.props.match.params.record_id,
+			'REDO'
+		)
+			.then(res => {
+				this.updateStateRecord(res.record);
+				this.updateStateCells(res.cells);
+			})
+			.catch(res => {
+				this.setState({ error: res.error });
+			});
+	}
+
+	updateStateRecord(record) {
 		this.setState({
-			num_empty_cells: this.state.num_empty_cells + numChange
+			num_empty_cells: record.num_empty_cells,
+			num_wrong_cells: record.num_wrong_cells,
+			step_id: record.step_id,
+			max_step_id: record.max_step_id
 		});
 	}
 
-	updatenum_wrong_cells(cellNo, newValue) {
-		const cell = this.state[cellNo];
-		let numChange = 0;
-		if (cell.value && cell.value !== cell.def_value && 
-			(!newValue || newValue === cell.def_value)) {
-				numChange--;
-		}
-		else if (newValue && newValue !== cell.def_value && 
-			(!cell.value || cell.value === cell.def_value)) {
-				numChange++;
-		}
-		this.setState({
-			num_wrong_cells: this.state.num_wrong_cells + numChange
-		});
-	}
-
-	validate(cellNo, newValue, excludeNo) {
-		const { ...state } = this.state;
-		const row = Math.floor(cellNo / 9);
-		const col = cellNo % 9;
-		const cellsToValidate = [];
-		let has_conflict = false;
-
-		[...Array(9)].map((_, i) => {
-			cellsToValidate.push(row * 9 + i);
-			cellsToValidate.push(i * 9 + col);
-			const r = Math.floor(row / 3) * 3 + Math.floor(i / 3);
-			const c = Math.floor(col / 3) * 3 + i % 3;
-			cellsToValidate.push(r * 9 + c);
-		})
-
-		cellsToValidate.forEach(no => {
-			if (no !== cellNo && no !== excludeNo) {
-				if (newValue && newValue === state[no].value) {
-					state[no].has_conflict = !state[no].is_default;
-					has_conflict = true;
-				}
-				else if (state[no].has_conflict) {
-					const conflict = this.validate(no, state[no].value, cellNo);
-					state[no].has_conflict = conflict;
-				}
+	updateStateCells(cells) {
+		cells.forEach(c => {
+			if (c.memos) {
+				this.setState({ [c.cell_id]: c });
+			}
+			else {
+				this.setState(state => ({
+					[c.cell_id]: {
+						cell_id: c.cell_id,
+						is_default: c.is_default,
+						def_value: c.def_value,
+						value: c.value,
+						has_conflict: c.has_conflict,
+						memos: state[c.cell_id].memos
+					}
+				}));
 			}
 		})
-
-		return has_conflict;
 	}
 
 	renderBoard() {
@@ -214,6 +240,14 @@ export default class GamePage extends Component {
 		return (
 			<section className='GamePage'>
 				{this.renderBoard()}
+				<ButtonsDiv className='GamePage__edit-div'>
+					<button className='GamePage__step-control' onClick={e => this.onClickUndo()}>
+						undo
+					</button>
+					<button className='GamePage__step-control' onClick={e => this.onClickRedo()}>
+						redo
+					</button>
+				</ButtonsDiv>
 				<button className={memoClass} onClick={e => this.onClickMemo()}>
 					memo
 				</button>

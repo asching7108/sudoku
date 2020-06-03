@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import TokenService from '../../services/token-service';
-import { Button, Input, Required } from '../Utils/Utils';
+import SudokuContext from '../../contexts/SudokuContext';
+import AuthApiService from '../../services/auth-api-service';
+import { Button, Input, Required, ButtonsDiv } from '../Utils/Utils';
 
 export default class RegisterForm extends Component {
+	static contextType = SudokuContext;
+
 	static defaultProps = {
 		onRegisterSuccess: () => {},
 		onClickOnCancel: () => {}
@@ -13,8 +16,36 @@ export default class RegisterForm extends Component {
 	handleSubmit = e => {
 		e.preventDefault();
 		this.setState({ error: null });
-		TokenService.saveAuthToken('temp-token');
-		this.props.onRegisterSuccess();
+		const { email, user_name, password, cf_password } = e.target;
+
+		if (password.value !== cf_password.value) {
+			this.setState({ error: 'The password and confirmation password do not match' });
+			return;
+		}
+
+		AuthApiService.postUser({
+			email: email.value,
+			password: password.value,
+			user_name: user_name.value
+		})
+			.then(res => 
+				AuthApiService.postLogin({
+					email: email.value,
+					password: password.value
+				})
+			)
+			.then(res => {
+				email.value = '';
+				password.value = '';
+				cf_password.value='';
+				user_name.value = '';
+				this.context.setAuthState(true);
+				this.context.setUserName(res.user_name);
+				this.props.onRegisterSuccess();
+			})
+			.catch(res => {
+				this.setState({ error: res.error });
+			});
 	}
 
 	render() {
@@ -71,14 +102,14 @@ export default class RegisterForm extends Component {
 						required
 					/>
 				</div>
-				<div className='row'>
+				<ButtonsDiv>
 					<Button type='button' onClick={this.props.onClickOnCancel}>
 						Cancel
 					</Button>
 					<Button type='submit'>
 						Create
 					</Button>
-				</div>
+				</ButtonsDiv>
 			</form>
 		);
 	}

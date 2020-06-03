@@ -5,7 +5,6 @@
 .GamePage__board-cell {
 	width: 9vw;
 	height: 9vw;
-	background-color: yellow;
 }
 
 .GamePage__cell-value {
@@ -33,6 +32,10 @@
 
 .select {
 	border: 2px solid red;
+}
+
+.GamePage__edit-div {
+	margin-top: 10px;
 }
 
 .GamePage__memo {

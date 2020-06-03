@@ -1,5 +1,5 @@
 import config from '../config';
-import TokenService from './token-service';
+import { options } from './helper';
 
 const PuzzlesApiService = {
 	getRandomPuzzleId(lv) {
@@ -11,12 +11,5 @@ const PuzzlesApiService = {
 			);
 	}
 };
-
-function options(options) {
-	if (TokenService.hasAuthToken()) {
-		options.header['authorization'] = `Bearer ${TokenService.getAuthToken()}`;
-	}
-	return options;
-}
 
 export default PuzzlesApiService;

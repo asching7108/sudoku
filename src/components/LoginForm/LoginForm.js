@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import TokenService from '../../services/token-service';
-import { Button, Input } from '../Utils/Utils';
+import SudokuContext from '../../contexts/SudokuContext';
+import AuthApiService from '../../services/auth-api-service';
+import { Button, Input, ButtonsDiv } from '../Utils/Utils';
 import './LoginForm.css';
 
 export default class LoginForm extends Component {
+	static contextType = SudokuContext;
+	
 	static defaultProps = {
 		onLoginSuccess: () => {},
 		onClickOnCancel: () => {}
@@ -11,11 +14,25 @@ export default class LoginForm extends Component {
 
 	state = { error: null };
 
-	handleSubmit = e => {
+	handleSubmitJwtAuth = e => {
 		e.preventDefault();
 		this.setState({ error: null });
-		TokenService.saveAuthToken('temp-token');
-		this.props.onLoginSuccess();
+		const { email, password } = e.target;
+
+		AuthApiService.postLogin({
+			email: email.value,
+			password: password.value
+		})
+			.then(res => {
+				email.value = '';
+				password.value = '';
+				this.context.setAuthState(true);
+				this.context.setUserName(res.user_name);
+				this.props.onLoginSuccess();
+			})
+			.catch(res => {
+				this.setState({ error: res.error });
+			});
 	}
 
 	render() {
@@ -23,7 +40,7 @@ export default class LoginForm extends Component {
 		return (
 			<form
 				className='LoginForm'
-				onSubmit={this.handleSubmit}
+				onSubmit={this.handleSubmitJwtAuth}
 			>
 				<div role='alert'>
 					{error && <p className='red'>{error}</p>}
@@ -50,14 +67,14 @@ export default class LoginForm extends Component {
 						required
 					/>
 				</div>
-				<div className='row'>
+				<ButtonsDiv>
 					<Button type='button' onClick={this.props.onClickOnCancel}>
 						Cancel
 					</Button>
 					<Button type='submit'>
 						Sign in
 					</Button>
-				</div>
+				</ButtonsDiv>
 			</form>
 		);
 	}
