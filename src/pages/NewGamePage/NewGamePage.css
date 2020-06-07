@@ -9,6 +9,33 @@
 	z-index: -1;
 }
 
-.NewGamePage button {
-	margin: 10px;
+.NewGamePage__btn {
+	width: 80vw;
+	margin: 1vh;
+	color: #0040DD;
+	font-size: 1em;
+	font-weight: 600;
+	border: none;
+	padding: 5px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.NewGamePage__btn:hover {
+	background-color: #0040DD;
+	color: #FFF;
+}
+
+.NewGamePage__btn:active {
+	-webkit-transform: translateY(3px);
+	transform: translateY(3px);
+}
+
+@media screen and (min-width: 300px) {
+	.NewGamePage__btn {
+		width: 50vw;
+		max-width: 360px;
+	}
 }

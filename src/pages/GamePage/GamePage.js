@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import RecordsApiService from '../../services/records-api-service';
-import { ButtonsDiv } from '../../components/Utils/Utils';
+import Modal from '../../components/Modal/Modal';
 import './GamePage.css';
 
 export default class GamePage extends Component {
@@ -20,6 +20,7 @@ export default class GamePage extends Component {
 			num_wrong_cells: 0,
 			step_id: null,
 			max_step_id: null,
+			is_solved: false,
 			error: null,
 			...emptySnapshot
 		};
@@ -43,10 +44,24 @@ export default class GamePage extends Component {
 		document.removeEventListener('click', this.onClickElsewhere, true);
 	}
 
+	onClickNewGame = () => {
+		this.props.history.push('/new');
+	}
+
 	onPressKeyboardDigit = e => {
-		// gets keyboard input number 1 to 9
-		if (e.keyCode >= 49 && e.keyCode <= 57) {
-			this.onClickDigit(e.keyCode - 48);
+		const k = e.keyCode;
+		// input number 1 to 9
+		if (k >= 49 && k <= 57) {
+			this.onClickDigit(k - 48);
+		}
+		// input arrow movement
+		else if (k >= 37 && k <= 40) {
+			const { select } = this.state;
+			let r = Math.floor(select / 9);
+			let c = select % 9;
+			if (k % 2 === 0) { r = Math.min(8, Math.max(0, r + (k - 39))); }
+			else { c = Math.min(8, Math.max(0, c + (k - 38))); }
+			this.setState({ select: r * 9 + c });
 		}
 	}
 
@@ -103,36 +118,28 @@ export default class GamePage extends Component {
 			.then(res => {
 				this.updateStateRecord(res.record);
 				this.updateStateCells(res.cells);
+				this.updateGameStatus();
 			})
 			.catch(res => {
 				this.setState({ error: res.error });
 			});
 	}
 
-	onClickUndo() {
-		if (!this.state.step_id) return;
-		RecordsApiService.updateRecordStep(
-			this.props.match.params.record_id,
-			'UNDO'
-		)
-			.then(res => {
-				this.updateStateRecord(res.record);
-				this.updateStateCells(res.cells);
-			})
-			.catch(res => {
-				this.setState({ error: res.error });
-			});
-	}
+	onClickUndoOrRedo(edit_type) {
+		const { step_id, max_step_id } = this.state;
+		if ((edit_type === 'UNDO' && !step_id) ||
+				(edit_type === 'REDO' && step_id === max_step_id)) {
+			return;
+		}
 
-	onClickRedo() {
-		if (this.state.step_id ===this.state.max_step_id) return;
 		RecordsApiService.updateRecordStep(
 			this.props.match.params.record_id,
-			'REDO'
+			edit_type
 		)
 			.then(res => {
 				this.updateStateRecord(res.record);
 				this.updateStateCells(res.cells);
+				this.updateGameStatus();
 			})
 			.catch(res => {
 				this.setState({ error: res.error });
@@ -168,33 +175,64 @@ export default class GamePage extends Component {
 		})
 	}
 
+	updateGameStatus() {
+		const { num_empty_cells, num_wrong_cells } = this.state;
+		if (!num_empty_cells && !num_wrong_cells) {
+			this.setState({
+				is_solved: true,
+				select: null
+			});
+		}
+	}
+
 	renderBoard() {
 		return (
 			<div className='GamePage__board col'>
-				{[...Array(9)].map((_, i) => this.renderBoardRow(i))}
+				{[...Array(3)].map((_, i) => this.renderBoardRow(i))}
 			</div>
 		);
 	}
 
-	renderBoardRow(row) {
+	renderBoardRow(boardRow) {
 		return (
-			<div className='GamePage__board-row row' key={`row-${row}`}>
-				{[...Array(9)].map((_, i) => this.renderBoardCell(row, i))}
+			<div className='GamePage__board-row row' key={boardRow}>
+				{[...Array(3)].map((_, i) => this.renderBoardBlock(boardRow * 3 + i))}
 			</div>
 		);
 	}
 
-	renderBoardCell(row, col) {
-		const { select, ...state } = this.state;
-		const cell = row * 9 + col;
+	renderBoardBlock(block) {
+		return (
+			<div className='GamePage__block col' key={block}>
+				{[...Array(3)].map((_, i) => this.renderBlockRow(block, i))}
+			</div>
+		);
+	}
 
-		let cellValueClass = 'GamePage__cell-value row';
-		if (state[cell].is_default) cellValueClass += ' default';
-		if (state[cell].has_conflict) cellValueClass += ' conflict';
-		if (select === cell) cellValueClass += ' select';
+	renderBlockRow(block, row) {
+		return (
+			<div className='GamePage__block-row row' key={row}>
+				{[...Array(3)].map((_, i) => this.renderBlockCell(block, row, i))}
+			</div>
+		);
+	}
+
+	renderBlockCell(block, row, col) {
+		const { memoMode, select, ...state } = this.state;
+		const cell = Math.floor(block / 3) * 27 + block % 3 * 3 + row * 9 + col;
+
+		let cellClass = (memoMode)
+			? 'GamePage__board-cell memo-mode-cell'
+			: 'GamePage__board-cell';
+		if (select === cell) { cellClass += ' select'; }
+		const cellValueClass = (state[cell].is_default)
+			? 'GamePage__cell-value row default'
+			: (state[cell].has_conflict)
+				? 'GamePage__cell-value row conflict'
+				: 'GamePage__cell-value row';
 		
 		return (
-			<div className='GamePage__board-cell' key={`cell-${cell}`}>
+			<div className={cellClass} key={cell}>
 				{[...Array(3)].map((_, i) => 
 					<div className='GamePage__memo-row row' key={`memo-row-${i}`}>
 						{[...Array(3)].map((_, j) => this.renderCellMemo(cell, i * 3 + j))}
@@ -202,7 +240,7 @@ export default class GamePage extends Component {
 				)}
 				<div 
 					className={cellValueClass}
-					tabIndex={0}
+					tabIndex={cell + 1}
 					onFocus={e => this.onClickCell(cell)}
 					onClick={e => this.onClickCell(cell)}
 				>
@@ -221,43 +259,75 @@ export default class GamePage extends Component {
 		);
 	}
 
-	renderDigits() {
+	renderButtons() {
+		let memoClass = (this.state.memoMode)
+			? 'GamePage__memo-btn mode-on'
+			: 'GamePage__memo-btn';
+
 		return (
-			<div className='GamePage__digits'>
-				{[...Array(9)].map((_, i) => (
-					<button key={i} onClick={e => this.onClickDigit(i + 1)}>{i + 1}</button>
-				))}
+			<div className='GamePage__panel-row'>
+				<button 
+					className='GamePage__undo' 
+					onClick={e => this.onClickUndoOrRedo('UNDO')}
+				>
+					Undo
+				</button>
+				<button className={memoClass} onClick={e => this.onClickMemo()}>
+					memo
+				</button>
+				<button 
+					className='GamePage__redo' 
+					onClick={e => this.onClickUndoOrRedo('REDO')}
+				>
+					Redo
+				</button>
+			</div>
+		);
+	}
+
+	renderDigits() {
+		const { memoMode, select, ...state } = this.state;
+		return (
+			<div className='GamePage__digits row'>
+				{[...Array(9)].map((_, i) => {
+					const digitClass = (memoMode) 
+						? (select !== null && state[select].memos[i])
+							? 'GamePage__digit-memo-select' 
+							: 'GamePage__digit-memo' 
+						: 'GamePage__digit';
+					return (
+						<button 
+							key={i}
+							className={digitClass}
+							onClick={e => this.onClickDigit(i + 1)}
+						>
+							{i + 1}
+						</button>
+					);
+				})}
 			</div>
 		);
 	}
 
 	render() {
-		const { memoMode, num_empty_cells, num_wrong_cells } = this.state;
-
-		let memoClass = 'GamePage__memo-btn';
-		if (memoMode) memoClass += ' mode-on';
+		const { memoMode, is_solved } = this.state;
 
 		return (
 			<section className='GamePage'>
 				{this.renderBoard()}
-				<ButtonsDiv className='GamePage__edit-div'>
-					<button className='GamePage__step-control' onClick={e => this.onClickUndo()}>
-						undo
-					</button>
-					<button className='GamePage__step-control' onClick={e => this.onClickRedo()}>
-						redo
-					</button>
-				</ButtonsDiv>
-				<button className={memoClass} onClick={e => this.onClickMemo()}>
-					memo
-				</button>
-				{this.renderDigits()}
-				{memoMode && (
-					<div className='GamePage__note'>Memo mode: add memos of numbers</div>
-				)}
-				{!num_empty_cells && !num_wrong_cells && (
-					<div>You win!</div>
-				)}
+				<div className='GamePage__panel col'>
+					{this.renderButtons()}
+					{this.renderDigits()}
+					{memoMode && (
+						<div className='GamePage__note'>
+							Allow multiple numbers in cells
+						</div>
+					)}
+				</div>
+				<Modal 
+					showModal={is_solved}
+					onClickNewGame={this.onClickNewGame}
+				/>
 			</section>
 		);
 	}

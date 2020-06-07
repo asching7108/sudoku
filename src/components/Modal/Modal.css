@@ -1,0 +1,88 @@
+.Modal__overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(174, 174, 174, 0.5);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.ol-hidden {
+	display: none;
+}
+
+.ol-shown {
+	display: block;
+}
+
+.Modal__text {
+	position: absolute;
+	top: 30vh;
+	color: #0040DD;
+	text-shadow: -2px 2px 0 #FFF,
+							 2px -2px 0 #FFF,
+							 2px 2px 0 #FFF,
+							 -2px -2px 0 #FFF;
+	-webkit-transition: all 2s;
+	-moz-transition: all 2s;
+	-o-transition: all 2s;
+	transition: all 2s;
+}
+
+.t-hidden {
+	font-size: 0;
+}
+
+.t-shown {
+	font-size: min(9vw, 72px);
+	z-index: 99;
+}
+
+.Modal__btn {
+	position: absolute;
+	top: calc(30vh + 1.5 * min(9vw, 72px));
+	font-size: max(min(3vw, 2vh), 10px);
+	margin-top: 10px;
+	padding: 3px 10px;
+	border: 1px solid #0040DD;
+	color: #0040DD;
+	border-radius: 15px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.b-hidden {
+	opacity: 0;
+	-webkit-transform: translateY(-20px);
+	transform: translateY(-20px);
+	z-index: -1;
+}
+
+.b-shown {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
+	z-index: 100;
+}
+
+.Modal__btn:hover {
+	background-color: #0040DD;
+	color: #FFF;
+}
+
+.Modal__btn:active {
+	-webkit-transform: translateY(3px);
+	transform: translateY(3px);
+}
+
+@media screen and (min-width: 400px) {
+	.Modal__btn {
+		padding: 5px 15px;
+	}
+}

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { LinkButton } from '../../components/Utils/Utils';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 
 export default class HomePage extends Component {
 	render() {
 		return (
 			<section className='HomePage'>
-				<LinkButton to='/new'>New Game</LinkButton>
+				<Link to='/new' className='HomePage__btn'>New Game</Link>
 			</section>
 		);
 	}

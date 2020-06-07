@@ -8,8 +8,8 @@ body {
 	font-family: "Helvetica Neue", "Helvetica", "Roboto", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: beige;
-	color: black;
+	background-color: #FFF;
+	color: #2C2C2E;
 	font-size: 14px;
 }
 
@@ -42,6 +42,14 @@ form {
 	max-width: 360px;
 }
 
+button {
+	outline: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
 h1, h2, h3, h4, h5, h6, p {
 	margin: 5px;
 }
@@ -52,11 +60,7 @@ a {
 }
 
 .red {
-	color: red;
-}
-
-button:hover {
-	cursor: pointer;
+	color: #D70015;
 }
 
 @media screen and (min-width: 600px) {

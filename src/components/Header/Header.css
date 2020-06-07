@@ -1,14 +1,26 @@
 .Header {
+	width: 90vw;
 	height: 40px;
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .Header__div {
 	margin: 0;
 	display: flex;
 	align-items: center;
+}
+
+.Header__logo {
+	background-color: #0040DD;
+	color: #FFF;
+	margin: 0;
+	padding: 5px;
+	font-size: 1em;
+	font-weight: 600;
 }
 
 .Header__link {
@@ -21,16 +33,25 @@
 	text-decoration: none;
 	white-space: nowrap;
 	position: relative;
-	top: -3px;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 400px) {
 	.Header__link {
 		font-size: 1em;
 		padding: 5px 15px;
+	}
+
+	.Header__logo {
+		font-size: 1.2em;
+	}
+}
+
+@media screen and (min-width: 660px) {
+	.Header {
+		width: 540px;
 	}
 }

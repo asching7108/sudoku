@@ -9,6 +9,31 @@
 	z-index: -1;
 }
 
-.HomePage a {
-	margin: 10px;
+.HomePage__btn {
+	color: #0040DD;
+	font-size: 1.6em;
+	font-weight: 600;
+	border: none;
+	padding-bottom: 5px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.HomePage__btn:hover {
+	border-bottom: 3px solid #0040DD;
+	-webkit-transform: translateY(-3px);
+	transform: translateY(-3px);
+}
+
+.HomePage__btn:active {
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+@media screen and (min-width: 300px) {
+	.HomePage__btn {
+		font-size: 2em;
+	}
 }

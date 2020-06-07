@@ -14,11 +14,14 @@ export default class Header extends Component {
 	}
 
 	renderLoginLink() {
+		return <></>;
+		/*
 		return (
 			<Link className='Header__link' to='/signin'>
 				Sign in
 			</Link>
 		);
+		*/
 	}
 
 	renderLogoutLink() {
@@ -37,9 +40,7 @@ export default class Header extends Component {
 		return (
 			<>
 				<nav className='Header'>
-					<div className='Header__div'>
-						<h1 className='Header__title'><Link to='/'>Sudoku</Link></h1>
-					</div>
+					<Link to='/' className='Header__logo'>Sudoku</Link>
 					<div className='Header__div'>
 						{this.context.hasAuthToken
 							? this.renderLogoutLink()

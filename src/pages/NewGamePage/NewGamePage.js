@@ -21,16 +21,21 @@ export default class NewGamePage extends Component {
 
 	render() {
 		const { error } = this.state;
+		const levels = ['Very Easy', 'Easy', 'Normal', 'Hard', 'Very Hard', 'Crazy'];
 		return (
 			<section className='NewGamePage'>
 				<div role='alert'>
 					{error && <p className='red'>{error}</p>}
 				</div>
-				<button onClick={e => this.onClickLevel(1)}>Very Easy</button>
-				<button onClick={e => this.onClickLevel(2)}>Easy</button>
-				<button onClick={e => this.onClickLevel(3)}>Normal</button>
-				<button onClick={e => this.onClickLevel(4)}>Hard</button>
-				<button onClick={e => this.onClickLevel(5)}>Very Hard</button>
+				{levels.map((lv, i) => (
+					<button 
+						key={i}
+						className='NewGamePage__btn' 
+						onClick={e => this.onClickLevel(i + 1)}
+					>
+						{lv}
+					</button>
+				))}
 			</section>
 		);
 	}
