@@ -121,10 +121,14 @@
 	left: 0;
 	width: 0;
 	height: 0;
-	border-left: min(3vw, 2vh) solid transparent;
-	border-right: min(3vw, 2vh) solid transparent;
 	border-top-width: min(1.5vw, 1vh);
+	border-left-width: min(3vw, 2vh);
+	border-right-width: min(3vw, 2vh);
 	border-top-style: solid;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-left-color: transparent;
+	border-right-color: transparent;
 }
 
 .GamePage__digit:after {
