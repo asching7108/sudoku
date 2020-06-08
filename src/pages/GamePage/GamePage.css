@@ -123,18 +123,20 @@
 	height: 0;
 	border-left: min(3vw, 2vh) solid transparent;
 	border-right: min(3vw, 2vh) solid transparent;
+	border-top-width: min(1.5vw, 1vh);
+	border-top-style: solid;
 }
 
 .GamePage__digit:after {
-	border-top: min(1.5vw, 1vh) solid #FFD426;
+	border-top-color: #FFD426;
 }
 
 .GamePage__digit-memo:after {
-	border-top: min(1.5vw, 1vh) solid #C7C7CC;
+	border-top-color: #C7C7CC;
 }
 
 .GamePage__digit-memo-select:after {
-	border-top: min(1.5vw, 1vh) solid #E5E5EA;
+	border-top-color: #E5E5EA;
 }
 
 .GamePage__note {

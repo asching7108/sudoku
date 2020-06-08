@@ -49,9 +49,3 @@
 		font-size: 1.2em;
 	}
 }
-
-@media screen and (min-width: 660px) {
-	.Header {
-		width: 540px;
-	}
-}
