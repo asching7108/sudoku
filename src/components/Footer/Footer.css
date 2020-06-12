@@ -1,8 +1,8 @@
 .Footer {
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	color: #636366;
-	margin: 10px 0;
+	margin: 100px 0 10px;
 	width: 100vw;
 	text-align: center;
 }

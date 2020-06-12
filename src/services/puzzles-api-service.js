@@ -11,7 +11,7 @@ const PuzzlesApiService = {
 	},
 
 	getRandomPuzzleId(lv) {
-		return fetch(`${config.API_BASE_URL}/puzzles?level=${lv}`)
+		return fetch(`${config.API_BASE_URL}/api/puzzles?level=${lv}`)
 			.then(res => 
 				(!res.ok)
 					? res.json().then(e => Promise.reject(e))

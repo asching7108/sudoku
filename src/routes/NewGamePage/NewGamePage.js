@@ -11,7 +11,7 @@ export default class NewGamePage extends Component {
 				this.props.history.push(`/game/${res.record.id}`);
 			})
 			.catch(res => {
-				console.log(res.error);
+				console.error(res.error);
 			})
 	}
 

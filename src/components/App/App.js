@@ -12,11 +12,8 @@ import './App.css';
 class App extends Component {
 	componentDidMount() {
 		PuzzlesApiService.pingServer()
-			.then(() => {
-				console.log('Server is alive!');
-			})
-			.catch(() => {
-				console.log('Unable to reach the server.');
+			.catch(error => {
+				console.error(error);
 			});
 	}
 

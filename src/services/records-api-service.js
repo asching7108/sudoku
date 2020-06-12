@@ -2,7 +2,7 @@ import config from '../config';
 
 const RecordsApiService = {
 	postRecord(puzzle_id) {
-		return fetch(`${config.API_BASE_URL}/records`, {
+		return fetch(`${config.API_BASE_URL}/api/records`, {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'
@@ -16,7 +16,7 @@ const RecordsApiService = {
 			);
 	},
 	getRecordById(record_id) {
-		return fetch(`${config.API_BASE_URL}/records/${record_id}`)
+		return fetch(`${config.API_BASE_URL}/api/records/${record_id}`)
 			.then(res => 
 				(!res.ok)
 				? res.json().then(e => Promise.reject(e))
@@ -25,7 +25,7 @@ const RecordsApiService = {
 	},
 	updateRecord(record_id, updateCols) {
 		return fetch(
-			`${config.API_BASE_URL}/records/${record_id}`, {
+			`${config.API_BASE_URL}/api/records/${record_id}`, {
 				method: 'PATCH',
 				headers: {
 					'content-type': 'application/json'
@@ -40,7 +40,7 @@ const RecordsApiService = {
 	},
 
 	postRecordStep(record_id, duration, steps) {
-		return fetch(`${config.API_BASE_URL}/records/${record_id}/steps`, {
+		return fetch(`${config.API_BASE_URL}/api/records/${record_id}/steps`, {
 			method: 'POST',
 			headers: {
 				'content-type': 'application/json'
@@ -56,7 +56,7 @@ const RecordsApiService = {
 
 	updateRecordStep(record_id, edit_type, duration) {
 		return fetch(
-			`${config.API_BASE_URL}/records/${record_id}/steps`, {
+			`${config.API_BASE_URL}/api/records/${record_id}/steps`, {
 				method: 'PATCH',
 				headers: {
 					'content-type': 'application/json'

@@ -43,7 +43,7 @@ export default class GamePage extends Component {
 				this.updateGameStatus(false);
 			})
 			.catch(res => {
-				console.log(res.error);
+				console.error(res.error);
 			});
 
 		document.addEventListener('keydown', this.onPressKeyboardDigit, false);
@@ -136,7 +136,7 @@ export default class GamePage extends Component {
 				this.updateGameStatus(true);
 			})
 			.catch(res => {
-				console.log(res.error);
+				console.error(res.error);
 			});
 	}
 
@@ -158,7 +158,7 @@ export default class GamePage extends Component {
 				this.updateGameStatus(true);
 			})
 			.catch(res => {
-				console.log(res.error);
+				console.error(res.error);
 			});
 	}
 
@@ -172,7 +172,7 @@ export default class GamePage extends Component {
 			{ duration: this.state.duration.as('seconds') }
 		)
 			.catch(res => {
-				console.log(res.error);
+				console.error(res.error);
 			});
 	}
 
