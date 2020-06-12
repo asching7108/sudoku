@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import RecordsApiService from '../../services/records-api-service';
 import Modal from '../../components/Modal/Modal';
 import './GamePage.css';
 
 export default class GamePage extends Component {
+	static defaultProps = {
+		match: { params: '' }
+	}
+
 	constructor(props) {
 		super(props);
 		const emptySnapshot = Array(81).fill({
@@ -14,6 +19,7 @@ export default class GamePage extends Component {
 			memos: Array(9).fill(false)
 		});
 		this.state = {
+			duration: moment.duration(0),
 			select: null,
 			memoMode: false,
 			num_empty_cells: 81,
@@ -21,7 +27,7 @@ export default class GamePage extends Component {
 			step_id: null,
 			max_step_id: null,
 			is_solved: false,
-			error: null,
+			showModal: false,
 			...emptySnapshot
 		};
 	}
@@ -30,22 +36,30 @@ export default class GamePage extends Component {
 		RecordsApiService.getRecordById(this.props.match.params.record_id)
 			.then(res => {
 				this.updateStateRecord(res.record);
-				this.setState({ ...res.snapshot });	// faster than calling updateStateCells
+				this.setState({ 
+					duration: moment.duration(res.record.duration, 'seconds'),
+					...res.snapshot	// faster than calling updateStateCells
+				});
+				this.updateGameStatus(false);
 			})
 			.catch(res => {
-				this.setState({ error: res.error });
+				console.log(res.error);
 			});
+
 		document.addEventListener('keydown', this.onPressKeyboardDigit, false);
 		document.addEventListener('click', this.onClickElsewhere, true);
+		window.addEventListener('beforeunload', this.updateRecordDuration);
+		this.addDuration = window.setInterval(() => {
+			this.setState({ duration: this.state.duration.add(1000)});
+		}, 1000);
 	}
 
 	componentWillUnmount() {
+		clearInterval(this.updateDuration);
+		clearInterval(this.addDuration);
 		document.removeEventListener('keydown', this.onPressKeyboardDigit, false);
 		document.removeEventListener('click', this.onClickElsewhere, true);
-	}
-
-	onClickNewGame = () => {
-		this.props.history.push('/new');
+		this.updateRecordDuration();
 	}
 
 	onPressKeyboardDigit = e => {
@@ -77,9 +91,9 @@ export default class GamePage extends Component {
 	onClickMemo() { this.setState(state => ({ memoMode: !state.memoMode })); }
 
 	onClickDigit(value) {
-		const { select, step_id, memoMode, ...state } = this.state;
+		const { duration, is_solved, select, step_id, memoMode, ...state } = this.state;
 
-		if (select == null || state[select].is_default) return;
+		if (is_solved || select === null || state[select].is_default) return;
 
 		const cell = state[select];
 
@@ -113,20 +127,21 @@ export default class GamePage extends Component {
 
 		RecordsApiService.postRecordStep(
 			this.props.match.params.record_id,
+			duration.as('seconds'),
 			steps
 		)
 			.then(res => {
 				this.updateStateRecord(res.record);
 				this.updateStateCells(res.cells);
-				this.updateGameStatus();
+				this.updateGameStatus(true);
 			})
 			.catch(res => {
-				this.setState({ error: res.error });
+				console.log(res.error);
 			});
 	}
 
 	onClickUndoOrRedo(edit_type) {
-		const { step_id, max_step_id } = this.state;
+		const { duration, step_id, max_step_id } = this.state;
 		if ((edit_type === 'UNDO' && !step_id) ||
 				(edit_type === 'REDO' && step_id === max_step_id)) {
 			return;
@@ -134,15 +149,30 @@ export default class GamePage extends Component {
 
 		RecordsApiService.updateRecordStep(
 			this.props.match.params.record_id,
-			edit_type
+			edit_type,
+			duration.as('seconds'),
 		)
 			.then(res => {
 				this.updateStateRecord(res.record);
 				this.updateStateCells(res.cells);
-				this.updateGameStatus();
+				this.updateGameStatus(true);
 			})
 			.catch(res => {
-				this.setState({ error: res.error });
+				console.log(res.error);
+			});
+	}
+
+	onCloseModal = () => { this.setState({ showModal: false }); }
+
+	onClickNewGame = () => { this.props.history.push('/new'); }
+
+	updateRecordDuration = () => {
+		RecordsApiService.updateRecord(
+			this.props.match.params.record_id,
+			{ duration: this.state.duration.as('seconds') }
+		)
+			.catch(res => {
+				console.log(res.error);
 			});
 	}
 
@@ -175,14 +205,24 @@ export default class GamePage extends Component {
 		})
 	}
 
-	updateGameStatus() {
+	updateGameStatus(shouldShowModal) {
 		const { num_empty_cells, num_wrong_cells } = this.state;
 		if (!num_empty_cells && !num_wrong_cells) {
 			this.setState({
 				is_solved: true,
+				showModal: shouldShowModal,
 				select: null
 			});
+			clearInterval(this.addDuration);
 		}
+	}
+
+	isRelativeCell(cell, select) {
+		if (Math.floor(cell / 9) === Math.floor(select / 9)) { return true; }
+		if (cell % 9 === select % 9) { return true; }
+		const cellBlock = Math.floor(cell / 27) * 3 + Math.floor(cell % 9 / 3);
+		const selectBlock = Math.floor(select / 27) * 3 + Math.floor(select % 9 / 3);
+		return (cellBlock === selectBlock);
 	}
 
 	renderBoard() {
@@ -222,9 +262,21 @@ export default class GamePage extends Component {
 		const cell = Math.floor(block / 3) * 27 + block % 3 * 3 + row * 9 + col;
 
 		let cellClass = (memoMode)
-			? 'GamePage__board-cell memo-mode-cell'
+			? 'GamePage__board-cell cell-memo-mode'
 			: 'GamePage__board-cell';
-		if (select === cell) { cellClass += ' select'; }
+		if (select === cell) {
+			cellClass += ' select';
+		}
+		else if (select !== null) {
+			if (state[cell].value && state[cell].value === state[select].value) {
+				cellClass += ' select-value'
+			}
+			else if (this.isRelativeCell(cell, select)) {
+				cellClass += ' relative';
+			}
+			else { cellClass += ' other-cells'; }
+		}
+
 		const cellValueClass = (state[cell].is_default)
 			? 'GamePage__cell-value row default'
 			: (state[cell].has_conflict)
@@ -310,10 +362,16 @@ export default class GamePage extends Component {
 	}
 
 	render() {
-		const { memoMode, is_solved } = this.state;
+		const { duration, memoMode, showModal } = this.state;
 
 		return (
 			<section className='GamePage'>
+				<div className='GamePage__timer'>
+					{duration.as('hours') < 1
+						? moment.utc(duration.as('milliseconds')).format('mm : ss')
+						: moment.utc(duration.as('milliseconds')).format('HH : mm : ss')
+					}
+				</div>
 				{this.renderBoard()}
 				<div className='GamePage__panel col'>
 					{this.renderButtons()}
@@ -324,8 +382,24 @@ export default class GamePage extends Component {
 						</div>
 					)}
 				</div>
+				<div className='GamePage__intro'>
+					<h2>HOW TO PLAY</h2>
+					<p>
+						Sudoku is a popular Japanese puzzle game based on the logical placement 
+						of digits from 1 to 9.
+					</p>
+					<p>
+						To win the game, you need to fill in all empty cells so that:
+					</p>
+					<ul>
+						<li>Each row contains exactly one of every digit from 1 to 9.</li>
+						<li>Each column contains exactly one of every digit from 1 to 9.</li>
+						<li>Each section (3 * 3 cells) contains exactly one of every digit from 1 to 9.</li>
+					</ul>
+				</div>
 				<Modal 
-					showModal={is_solved}
+					showModal={showModal}
+					onCloseModal={this.onCloseModal}
 					onClickNewGame={this.onClickNewGame}
 				/>
 			</section>

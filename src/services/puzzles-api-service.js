@@ -1,9 +1,17 @@
 import config from '../config';
-import { options } from './helper';
 
 const PuzzlesApiService = {
+	pingServer() {
+		return fetch(`${config.API_BASE_URL}`)
+			.then(res =>
+				(!res.ok)
+					? res.json().then(e => Promise.reject(e))
+					: res.json()
+			);
+	},
+
 	getRandomPuzzleId(lv) {
-		return fetch(`${config.API_BASE_URL}/puzzles?level=${lv}`, options())
+		return fetch(`${config.API_BASE_URL}/puzzles?level=${lv}`)
 			.then(res => 
 				(!res.ok)
 					? res.json().then(e => Promise.reject(e))

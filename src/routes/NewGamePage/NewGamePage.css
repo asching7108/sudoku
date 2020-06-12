@@ -11,12 +11,12 @@
 
 .NewGamePage__btn {
 	width: 80vw;
-	margin: 1vh;
+	margin: 0.2vh;
 	color: #0040DD;
 	font-size: 1em;
 	font-weight: 600;
 	border: none;
-	padding: 5px;
+	padding: 3px;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	-o-transition: all 0.3s;

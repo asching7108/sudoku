@@ -1,3 +1,11 @@
+.GamePage__timer {
+	width: min(81vw, 54vh);
+	margin-bottom: min(0.9vw, 0.6vh);
+	font-size: max(min(3vw, 2vh), 10px);
+	font-weight: 600;
+	text-align: end;
+}
+
 .GamePage__board {
 	border: 2px solid #636366;
 }
@@ -12,14 +20,24 @@
 	border: 0.5px solid #D8D8DC;
 }
 
-.memo-mode-cell {
+.cell-memo-mode {
 	background-color: #F7F7F7;
 }
 
+.relative {
+	background-color: #E0F6FF;
+}
+
+.select-value {
+	background-color: #C1DBC8;
+}
+
 .select {
-	border: 0.5px solid #D70015;
-	outline: 1px solid #D70015;
-	z-index: 99;
+	background-color: #B2E9FF;
+}
+
+.other-cells:hover {
+	background-color: #B2E9FF;
 }
 
 .GamePage__cell-value {
@@ -166,7 +184,38 @@
 	border-top-color: #FFCC00;
 }
 
+.GamePage__intro {
+	width: min(81vw, 54vh);
+	line-height: 1.2em;
+}
+
+.GamePage__intro h2 {
+	text-align: center;
+	font-size: min(4.5vw, 3vh);
+	color: #0040DD;
+	margin: 25px 0 15px;
+}
+
+.GamePage__intro p {
+	text-align: justify;
+	font-size: max(min(3vw, 2vh), 12px);
+	color: #636366;
+	margin: 10px 0;
+}
+
+.GamePage__intro ul {
+	text-align: justify;
+	font-size: max(min(3vw, 2vh), 12px);
+	color: #636366;
+	margin: 10px 5px;
+	padding-left: 15px;
+}
+
 @media screen and (min-width: 400px) {
+	.GamePage__timer {
+		margin-bottom: min(3vw, 1vh);
+	}
+
 	.GamePage__panel-row {
 		margin-top: min(3vw, 1vh);
 	}

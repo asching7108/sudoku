@@ -1,0 +1,5432 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GamePage Component renders the UI as expected 1`] = `
+<section
+  className="GamePage"
+>
+  <div
+    className="GamePage__timer"
+  >
+    00 : 00
+  </div>
+  <div
+    className="GamePage__board col"
+  >
+    <div
+      className="GamePage__board-row row"
+      key="0"
+    >
+      <div
+        className="GamePage__block col"
+        key="0"
+      >
+        <div
+          className="GamePage__block-row row"
+          key="0"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="0"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="0-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="0-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="0-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="0-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="0-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="0-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="0-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="0-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="0-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={1}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="1"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="1-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="1-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="1-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="1-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="1-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="1-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="1-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="1-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="1-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={2}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="2"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="2-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="2-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="2-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="2-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="2-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="2-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="2-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="2-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="2-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={3}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="1"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="9"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="9-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="9-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="9-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="9-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="9-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="9-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="9-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="9-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="9-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={10}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="10"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="10-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="10-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="10-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="10-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="10-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="10-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="10-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="10-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="10-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={11}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="11"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="11-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="11-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="11-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="11-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="11-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="11-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="11-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="11-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="11-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={12}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="2"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="18"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="18-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="18-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="18-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="18-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="18-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="18-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="18-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="18-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="18-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={19}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="19"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="19-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="19-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="19-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="19-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="19-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="19-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="19-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="19-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="19-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={20}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="20"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="20-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="20-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="20-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="20-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="20-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="20-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="20-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="20-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="20-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={21}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="GamePage__block col"
+        key="1"
+      >
+        <div
+          className="GamePage__block-row row"
+          key="0"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="3"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="3-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="3-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="3-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="3-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="3-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="3-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="3-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="3-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="3-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={4}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="4"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="4-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="4-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="4-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="4-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="4-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="4-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="4-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="4-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="4-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={5}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="5"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="5-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="5-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="5-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="5-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="5-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="5-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="5-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="5-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="5-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={6}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="1"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="12"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="12-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="12-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="12-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="12-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="12-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="12-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="12-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="12-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="12-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={13}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="13"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="13-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="13-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="13-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="13-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="13-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="13-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="13-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="13-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="13-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={14}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="14"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="14-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="14-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="14-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="14-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="14-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="14-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="14-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="14-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="14-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={15}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="2"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="21"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="21-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="21-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="21-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="21-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="21-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="21-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="21-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="21-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="21-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={22}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="22"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="22-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="22-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="22-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="22-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="22-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="22-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="22-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="22-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="22-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={23}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="23"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="23-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="23-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="23-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="23-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="23-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="23-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="23-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="23-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="23-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={24}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="GamePage__block col"
+        key="2"
+      >
+        <div
+          className="GamePage__block-row row"
+          key="0"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="6"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="6-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="6-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="6-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="6-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="6-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="6-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="6-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="6-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="6-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={7}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="7"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="7-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="7-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="7-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="7-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="7-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="7-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="7-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="7-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="7-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={8}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="8"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="8-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="8-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="8-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="8-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="8-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="8-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="8-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="8-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="8-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={9}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="1"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="15"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="15-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="15-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="15-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="15-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="15-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="15-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="15-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="15-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="15-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={16}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="16"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="16-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="16-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="16-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="16-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="16-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="16-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="16-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="16-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="16-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={17}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="17"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="17-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="17-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="17-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="17-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="17-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="17-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="17-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="17-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="17-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={18}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="2"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="24"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="24-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="24-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="24-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="24-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="24-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="24-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="24-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="24-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="24-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={25}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="25"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="25-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="25-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="25-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="25-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="25-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="25-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="25-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="25-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="25-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={26}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="26"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="26-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="26-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="26-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="26-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="26-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="26-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="26-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="26-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="26-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={27}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="GamePage__board-row row"
+      key="1"
+    >
+      <div
+        className="GamePage__block col"
+        key="3"
+      >
+        <div
+          className="GamePage__block-row row"
+          key="0"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="27"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="27-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="27-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="27-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="27-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="27-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="27-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="27-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="27-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="27-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={28}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="28"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="28-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="28-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="28-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="28-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="28-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="28-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="28-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="28-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="28-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={29}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="29"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="29-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="29-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="29-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="29-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="29-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="29-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="29-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="29-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="29-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={30}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="1"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="36"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="36-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="36-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="36-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="36-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="36-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="36-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="36-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="36-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="36-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={37}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="37"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="37-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="37-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="37-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="37-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="37-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="37-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="37-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="37-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="37-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={38}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="38"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="38-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="38-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="38-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="38-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="38-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="38-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="38-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="38-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="38-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={39}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="2"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="45"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="45-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="45-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="45-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="45-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="45-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="45-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="45-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="45-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="45-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={46}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="46"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="46-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="46-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="46-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="46-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="46-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="46-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="46-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="46-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="46-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={47}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="47"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="47-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="47-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="47-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="47-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="47-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="47-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="47-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="47-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="47-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={48}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="GamePage__block col"
+        key="4"
+      >
+        <div
+          className="GamePage__block-row row"
+          key="0"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="30"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="30-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="30-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="30-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="30-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="30-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="30-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="30-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="30-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="30-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={31}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="31"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="31-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="31-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="31-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="31-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="31-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="31-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="31-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="31-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="31-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={32}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="32"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="32-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="32-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="32-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="32-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="32-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="32-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="32-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="32-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="32-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={33}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="1"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="39"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="39-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="39-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="39-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="39-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="39-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="39-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="39-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="39-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="39-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={40}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="40"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="40-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="40-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="40-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="40-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="40-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="40-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="40-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="40-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="40-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={41}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="41"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="41-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="41-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="41-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="41-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="41-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="41-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="41-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="41-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="41-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={42}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="2"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="48"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="48-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="48-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="48-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="48-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="48-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="48-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="48-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="48-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="48-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={49}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="49"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="49-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="49-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="49-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="49-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="49-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="49-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="49-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="49-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="49-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={50}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="50"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="50-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="50-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="50-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="50-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="50-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="50-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="50-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="50-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="50-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={51}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="GamePage__block col"
+        key="5"
+      >
+        <div
+          className="GamePage__block-row row"
+          key="0"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="33"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="33-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="33-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="33-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="33-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="33-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="33-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="33-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="33-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="33-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={34}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="34"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="34-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="34-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="34-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="34-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="34-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="34-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="34-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="34-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="34-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={35}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="35"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="35-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="35-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="35-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="35-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="35-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="35-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="35-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="35-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="35-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={36}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="1"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="42"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="42-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="42-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="42-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="42-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="42-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="42-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="42-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="42-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="42-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={43}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="43"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="43-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="43-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="43-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="43-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="43-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="43-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="43-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="43-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="43-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={44}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="44"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="44-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="44-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="44-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="44-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="44-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="44-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="44-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="44-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="44-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={45}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="2"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="51"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="51-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="51-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="51-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="51-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="51-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="51-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="51-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="51-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="51-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={52}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="52"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="52-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="52-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="52-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="52-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="52-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="52-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="52-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="52-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="52-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={53}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="53"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="53-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="53-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="53-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="53-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="53-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="53-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="53-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="53-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="53-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={54}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="GamePage__board-row row"
+      key="2"
+    >
+      <div
+        className="GamePage__block col"
+        key="6"
+      >
+        <div
+          className="GamePage__block-row row"
+          key="0"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="54"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="54-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="54-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="54-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="54-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="54-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="54-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="54-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="54-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="54-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={55}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="55"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="55-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="55-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="55-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="55-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="55-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="55-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="55-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="55-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="55-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={56}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="56"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="56-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="56-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="56-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="56-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="56-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="56-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="56-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="56-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="56-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={57}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="1"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="63"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="63-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="63-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="63-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="63-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="63-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="63-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="63-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="63-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="63-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={64}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="64"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="64-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="64-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="64-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="64-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="64-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="64-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="64-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="64-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="64-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={65}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="65"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="65-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="65-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="65-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="65-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="65-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="65-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="65-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="65-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="65-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={66}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="2"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="72"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="72-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="72-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="72-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="72-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="72-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="72-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="72-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="72-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="72-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={73}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="73"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="73-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="73-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="73-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="73-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="73-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="73-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="73-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="73-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="73-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={74}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="74"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="74-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="74-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="74-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="74-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="74-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="74-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="74-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="74-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="74-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={75}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="GamePage__block col"
+        key="7"
+      >
+        <div
+          className="GamePage__block-row row"
+          key="0"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="57"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="57-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="57-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="57-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="57-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="57-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="57-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="57-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="57-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="57-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={58}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="58"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="58-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="58-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="58-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="58-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="58-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="58-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="58-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="58-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="58-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={59}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="59"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="59-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="59-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="59-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="59-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="59-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="59-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="59-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="59-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="59-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={60}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="1"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="66"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="66-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="66-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="66-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="66-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="66-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="66-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="66-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="66-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="66-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={67}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="67"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="67-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="67-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="67-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="67-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="67-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="67-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="67-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="67-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="67-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={68}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="68"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="68-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="68-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="68-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="68-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="68-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="68-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="68-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="68-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="68-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={69}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="2"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="75"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="75-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="75-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="75-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="75-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="75-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="75-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="75-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="75-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="75-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={76}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="76"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="76-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="76-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="76-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="76-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="76-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="76-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="76-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="76-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="76-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={77}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="77"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="77-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="77-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="77-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="77-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="77-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="77-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="77-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="77-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="77-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={78}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="GamePage__block col"
+        key="8"
+      >
+        <div
+          className="GamePage__block-row row"
+          key="0"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="60"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="60-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="60-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="60-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="60-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="60-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="60-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="60-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="60-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="60-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={61}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="61"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="61-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="61-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="61-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="61-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="61-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="61-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="61-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="61-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="61-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={62}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="62"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="62-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="62-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="62-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="62-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="62-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="62-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="62-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="62-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="62-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={63}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="1"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="69"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="69-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="69-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="69-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="69-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="69-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="69-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="69-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="69-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="69-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={70}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="70"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="70-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="70-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="70-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="70-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="70-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="70-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="70-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="70-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="70-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={71}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="71"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="71-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="71-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="71-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="71-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="71-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="71-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="71-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="71-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="71-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={72}
+            />
+          </div>
+        </div>
+        <div
+          className="GamePage__block-row row"
+          key="2"
+        >
+          <div
+            className="GamePage__board-cell"
+            key="78"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="78-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="78-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="78-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="78-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="78-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="78-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="78-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="78-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="78-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={79}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="79"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="79-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="79-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="79-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="79-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="79-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="79-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="79-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="79-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="79-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={80}
+            />
+          </div>
+          <div
+            className="GamePage__board-cell"
+            key="80"
+          >
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-0"
+            >
+              <div
+                className="GamePage__memo row"
+                key="80-0"
+              />
+              <div
+                className="GamePage__memo row"
+                key="80-1"
+              />
+              <div
+                className="GamePage__memo row"
+                key="80-2"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-1"
+            >
+              <div
+                className="GamePage__memo row"
+                key="80-3"
+              />
+              <div
+                className="GamePage__memo row"
+                key="80-4"
+              />
+              <div
+                className="GamePage__memo row"
+                key="80-5"
+              />
+            </div>
+            <div
+              className="GamePage__memo-row row"
+              key="memo-row-2"
+            >
+              <div
+                className="GamePage__memo row"
+                key="80-6"
+              />
+              <div
+                className="GamePage__memo row"
+                key="80-7"
+              />
+              <div
+                className="GamePage__memo row"
+                key="80-8"
+              />
+            </div>
+            <div
+              className="GamePage__cell-value row"
+              onClick={[Function]}
+              onFocus={[Function]}
+              tabIndex={81}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="GamePage__panel col"
+  >
+    <div
+      className="GamePage__panel-row"
+    >
+      <button
+        className="GamePage__undo"
+        onClick={[Function]}
+      >
+        Undo
+      </button>
+      <button
+        className="GamePage__memo-btn"
+        onClick={[Function]}
+      >
+        memo
+      </button>
+      <button
+        className="GamePage__redo"
+        onClick={[Function]}
+      >
+        Redo
+      </button>
+    </div>
+    <div
+      className="GamePage__digits row"
+    >
+      <button
+        className="GamePage__digit"
+        key="0"
+        onClick={[Function]}
+      >
+        1
+      </button>
+      <button
+        className="GamePage__digit"
+        key="1"
+        onClick={[Function]}
+      >
+        2
+      </button>
+      <button
+        className="GamePage__digit"
+        key="2"
+        onClick={[Function]}
+      >
+        3
+      </button>
+      <button
+        className="GamePage__digit"
+        key="3"
+        onClick={[Function]}
+      >
+        4
+      </button>
+      <button
+        className="GamePage__digit"
+        key="4"
+        onClick={[Function]}
+      >
+        5
+      </button>
+      <button
+        className="GamePage__digit"
+        key="5"
+        onClick={[Function]}
+      >
+        6
+      </button>
+      <button
+        className="GamePage__digit"
+        key="6"
+        onClick={[Function]}
+      >
+        7
+      </button>
+      <button
+        className="GamePage__digit"
+        key="7"
+        onClick={[Function]}
+      >
+        8
+      </button>
+      <button
+        className="GamePage__digit"
+        key="8"
+        onClick={[Function]}
+      >
+        9
+      </button>
+    </div>
+  </div>
+  <div
+    className="GamePage__intro"
+  >
+    <h2>
+      HOW TO PLAY
+    </h2>
+    <p>
+      Sudoku is a popular Japanese puzzle game based on the logical placement of digits from 1 to 9.
+    </p>
+    <p>
+      To win the game, you need to fill in all empty cells so that:
+    </p>
+    <ul>
+      <li>
+        Each row contains exactly one of every digit from 1 to 9.
+      </li>
+      <li>
+        Each column contains exactly one of every digit from 1 to 9.
+      </li>
+      <li>
+        Each section (3 * 3 cells) contains exactly one of every digit from 1 to 9.
+      </li>
+    </ul>
+  </div>
+  <Modal
+    onClickNewGame={[Function]}
+    onCloseModal={[Function]}
+    showModal={false}
+  />
+</section>
+`;
+
+exports[`HomePage Component renders the UI as expected 1`] = `
+<section
+  className="HomePage"
+>
+  <div
+    className="HomePage__btn-box col"
+  >
+    <Link
+      className="HomePage__btn"
+      to="/new"
+    >
+      New Game
+    </Link>
+  </div>
+</section>
+`;
+
+exports[`NewGamePage Component renders the UI as expected 1`] = `
+<section
+  className="NewGamePage"
+>
+  <button
+    className="NewGamePage__btn"
+    key="0"
+    onClick={[Function]}
+  >
+    Very Easy
+  </button>
+  <button
+    className="NewGamePage__btn"
+    key="1"
+    onClick={[Function]}
+  >
+    Easy
+  </button>
+  <button
+    className="NewGamePage__btn"
+    key="2"
+    onClick={[Function]}
+  >
+    Normal
+  </button>
+  <button
+    className="NewGamePage__btn"
+    key="3"
+    onClick={[Function]}
+  >
+    Hard
+  </button>
+  <button
+    className="NewGamePage__btn"
+    key="4"
+    onClick={[Function]}
+  >
+    Very Hard
+  </button>
+  <button
+    className="NewGamePage__btn"
+    key="5"
+    onClick={[Function]}
+  >
+    Crazy
+  </button>
+</section>
+`;
+
+exports[`NotFoundPage Component renders the UI as expected 1`] = `
+<section
+  className="NotFoundPage"
+>
+  <h2>
+    404 - Page not found
+  </h2>
+</section>
+`;

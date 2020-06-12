@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Component renders the UI as expected 1`] = `
+<footer
+  className="Footer col"
+>
+  <p
+    className="Footer__author"
+  >
+    Created by 
+    <a
+      href="http://asching7108.github.io/portfolio"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Esther Lin
+    </a>
+  </p>
+  <div>
+    <a
+      className="Footer__icon"
+      href="https://github.com/asching7108/sudoku-client/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon={
+          Array [
+            "fab",
+            "github",
+          ]
+        }
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+    </a>
+    <a
+      className="Footer__icon"
+      href="http://www.linkedin.com/in/esther-lin-tw/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon={
+          Array [
+            "fab",
+            "linkedin",
+          ]
+        }
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+    </a>
+  </div>
+  <p
+    className="Footer__copyright"
+  >
+    Copyright ©2020
+  </p>
+</footer>
+`;
+
+exports[`Header Component renders the UI as expected 1`] = `
+<nav
+  className="Header"
+>
+  <Link
+    className="Header__logo"
+    to="/"
+  >
+    Sudoku
+  </Link>
+  <div
+    className="Header__div"
+  />
+</nav>
+`;
+
+exports[`Modal Component renders the UI as expected 1`] = `
+<Fragment>
+  <div
+    className="Modal__overlay ol-hidden"
+  />
+  <h2
+    className="Modal__text t-hidden"
+  >
+    Congratulations!
+  </h2>
+  <ButtonsDiv
+    className="Modal__btn-div b-hidden"
+  >
+    <button
+      className="Modal__btn"
+      onClick={[Function]}
+    >
+      Stay on Page
+    </button>
+    <button
+      className="Modal__btn"
+      onClick={[Function]}
+    >
+      New Game
+    </button>
+  </ButtonsDiv>
+</Fragment>
+`;

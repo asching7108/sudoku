@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { ButtonsDiv } from '../Utils/Utils';
 import './Modal.css';
 
 export default class Modal extends Component {
 	static defaultProps = {
 		showModal: false,
+		onCloseModal: () => {},
 		onClickNewGame: () => {}
 	};
 
@@ -18,6 +20,11 @@ export default class Modal extends Component {
 		}
 	}
 
+	onClickStay = () => {
+		this.setState({ showButton: false });
+		this.props.onCloseModal();
+	}
+
 	render() {
 		const { showModal } = this.props;
 		const { showButton } = this.state;
@@ -27,12 +34,14 @@ export default class Modal extends Component {
 					<h2 className={`Modal__text ${(showModal) ? 't-shown' : 't-hidden'}`}>
 						Congratulations!
 					</h2>
-					<button 
-						className={`Modal__btn ${(showButton) ? 'b-shown' : 'b-hidden'}`}
-						onClick={this.props.onClickNewGame}
-					>
-						New Game
-					</button>
+					<ButtonsDiv className={`Modal__btn-div ${(showButton) ? 'b-shown' : 'b-hidden'}`}>
+						<button className='Modal__btn' onClick={this.onClickStay}>
+							Stay on Page
+						</button>
+						<button className='Modal__btn' onClick={this.props.onClickNewGame}>
+							New Game
+						</button>
+					</ButtonsDiv>
 			</>
 		);
 	}

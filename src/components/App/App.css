@@ -5,11 +5,11 @@
 }
 
 .App__main {
-	margin-top: 15px;
+	margin-top: 10px;
 }
 
 @media screen and (min-width: 600px) {
 	.App__main {
-		margin-top: 30px;
+		margin-top: 20px;
 	}
 }

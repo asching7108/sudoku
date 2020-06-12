@@ -1,38 +1,32 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import PuzzlesApiService from '../../services/puzzles-api-service';
 import Header from '../Header/Header';
-import HomePage from '../../pages/HomePage/HomePage';
-import LoginPage from '../../pages/LoginPage/LoginPage';
-import RegisterPage from '../../pages/RegisterPage';
-import NewGamePage from '../../pages/NewGamePage/NewGamePage';
-import ArchivesPage from '../../pages/ArchivesPage/ArchivesPage';
-import GamePage from '../../pages/GamePage/GamePage';
-import NotFoundPage from '../../pages/NotFoundPage';
+import Footer from '../Footer/Footer';
+import HomePage from '../../routes/HomePage/HomePage';
+import NewGamePage from '../../routes/NewGamePage/NewGamePage';
+import GamePage from '../../routes/GamePage/GamePage';
+import NotFoundPage from '../../routes/NotFoundPage';
 import './App.css';
 
 class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state = { hasError: false };
+	componentDidMount() {
+		PuzzlesApiService.pingServer()
+			.then(() => {
+				console.log('Server is alive!');
+			})
+			.catch(() => {
+				console.log('Unable to reach the server.');
+			});
 	}
 
-	static getDerivedStateFromError(error) {
-		console.error(error);
-		return { hasError: true };
-	};
-
 	render() {
-		const { hasError } = this.state;
 		return (
 			<div className='App'>
 				<header className='App__header'>
 					<Header />
 				</header>
 				<main className='App__main'>
-					{
-						hasError && 
-						<p className='red'>Something went wrong. Please refresh the page or try again later.</p>
-					}
 					<Switch>
 						<Route
 							exact
@@ -40,20 +34,8 @@ class App extends Component {
 							component={HomePage}
 						/>
 						<Route
-							path='/signin'
-							component={LoginPage}
-						/>
-						<Route
-							path='/signup'
-							component={RegisterPage}
-						/>
-						<Route
 							path='/new'
 							component={NewGamePage}
-						/>
-						<Route
-							path='/archives'
-							component={ArchivesPage}
 						/>
 						<Route
 							path='/game/:record_id'
@@ -64,6 +46,7 @@ class App extends Component {
 						/>
 					</Switch>
 				</main>
+				<Footer />
 			</div>
 		);
 	}

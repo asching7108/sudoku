@@ -3,64 +3,64 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import App from '../components/App/App';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import Modal from '../components/Modal/Modal';
+import HomePage from '../routes/HomePage/HomePage';
+import NewGamePage from '../routes/NewGamePage/NewGamePage';
+import GamePage from '../routes/GamePage/GamePage';
+import NotFoundPage from '../routes/NotFoundPage';
 
-describe(`App Component`, () => {
+describe(`HomePage Component`, () => {
 	it('renders without crashing', () => {
 		const div = document.createElement('div');
 		ReactDOM.render(
 			<BrowserRouter>
-				<App />
-			</BrowserRouter>,
-			div
-		);
-		ReactDOM.unmountComponentAtNode(div);
-	})
-})
-
-describe(`Header Component`, () => {
-	it('renders without crashing', () => {
-		const div = document.createElement('div');
-		ReactDOM.render(
-			<BrowserRouter>
-				<Header />
-			</BrowserRouter>,
+				<HomePage />
+			</BrowserRouter>, 
 			div
 		);
 		ReactDOM.unmountComponentAtNode(div);
 	})
 
 	it('renders the UI as expected', () => {
-		const wrapper = shallow(<Header />);
+		const wrapper = shallow(<HomePage />);
 		expect(toJson(wrapper)).toMatchSnapshot();
 	})
 })
 
-describe(`Footer Component`, () => {
+describe(`NewGamePage Component`, () => {
 	it('renders without crashing', () => {
 		const div = document.createElement('div');
-		ReactDOM.render(<Footer />, div);
+		ReactDOM.render(<NewGamePage />, div);
 		ReactDOM.unmountComponentAtNode(div);
 	})
 
 	it('renders the UI as expected', () => {
-		const wrapper = shallow(<Footer />);
+		const wrapper = shallow(<NewGamePage />);
 		expect(toJson(wrapper)).toMatchSnapshot();
 	})
 })
 
-describe(`Modal Component`, () => {
+describe(`GamePage Component`, () => {
 	it('renders without crashing', () => {
 		const div = document.createElement('div');
-		ReactDOM.render(<Modal />, div);
+		ReactDOM.render(<GamePage />, div);
 		ReactDOM.unmountComponentAtNode(div);
 	})
 
 	it('renders the UI as expected', () => {
-		const wrapper = shallow(<Modal />);
+		const wrapper = shallow(<GamePage />);
+		expect(toJson(wrapper)).toMatchSnapshot();
+	})
+})
+
+describe(`NotFoundPage Component`, () => {
+	it('renders without crashing', () => {
+		const div = document.createElement('div');
+		ReactDOM.render(<NotFoundPage />, div);
+		ReactDOM.unmountComponentAtNode(div);
+	})
+
+	it('renders the UI as expected', () => {
+		const wrapper = shallow(<NotFoundPage />);
 		expect(toJson(wrapper)).toMatchSnapshot();
 	})
 })

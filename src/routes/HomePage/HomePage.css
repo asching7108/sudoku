@@ -9,9 +9,14 @@
 	z-index: -1;
 }
 
+.HomePage__btn-box {
+	margin: 5px;
+	height: 1.2em;
+}
+
 .HomePage__btn {
 	color: #0040DD;
-	font-size: 1.6em;
+	font-size: 1.2em;
 	font-weight: 600;
 	border: none;
 	padding-bottom: 5px;
@@ -33,7 +38,23 @@
 }
 
 @media screen and (min-width: 300px) {
+	.HomePage__btn-box {
+		margin: 8px;
+		height: 1.5em;
+	}
+
 	.HomePage__btn {
-		font-size: 2em;
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (min-width: 400px) {
+	.HomePage__btn-box {
+		margin: 10px;
+		height: 1.8em;
+	}
+
+	.HomePage__btn {
+		font-size: 1.8em;
 	}
 }

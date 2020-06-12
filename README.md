@@ -1,6 +1,6 @@
-# Sudoku Web
+# Sudoku
 
-Sudoku Web is a full stack web application for sudoku.
+Sudoku is a full stack web application for the Japanese puzzle game Sudoku.
 
 This is the client-side code for the application with React, Node.js and Vanilla CSS.
 
@@ -11,6 +11,10 @@ This is the client-side code for the application with React, Node.js and Vanilla
 ## Server
 
 - [Server Repo](https://github.com/asching7108/sudoku-server/)
+
+## Sudoku Generator
+
+- [Sudoku Generator Repo (Java)](https://github.com/asching7108/sudokuGenerator/)
 
 ## Set Up
 
@@ -23,19 +27,26 @@ This is the client-side code for the application with React, Node.js and Vanilla
 
 ## Scripts
 
-- Start application `npm start`
+- Start application: `npm start`
 - Run tests: `npm test`
 
 ## Deploy
 
-Default deploying to Vercel. Replace name in `public/now.json` with your app name. When ready for deployment, run `npm run deploy`.
+Default deploying to Vercel. When ready for deployment, run `npm run deploy`. Set environment variables REACT_APP_API_BASE_URL on Vercel.
 
 ## Features
 
 * Consists of 6 different levels of sudokus.
 * Allows keeping memos of multiple numbers in each cell.
-* Automatically highlights conflict cells.
-* Allows undo and redo all steps.
+* Allows undoing and redoing all steps.
+* Automatically highlights conflict cells, cells in the same rows/columns/blocks or with the same digit as the selected cell.
+* Supports both mouse click and keyboard inputs.
+* Shows timer.
+* The server supports authentication system to store and retrieve archives by users, and allows unauthenticated access (guest users) to play freely.
+
+## Screenshots
+
+![Game Page](src/images/screenshot001.png)
 
 ## Technologies
 

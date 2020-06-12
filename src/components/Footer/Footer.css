@@ -1,0 +1,33 @@
+.Footer {
+	position: absolute;
+	bottom: 0;
+	color: #636366;
+	margin: 10px 0;
+	width: 100vw;
+	text-align: center;
+}
+
+Footer a {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.Footer__author {
+	font-size: 0.8em;
+}
+
+.Footer__icon {
+	font-size: 1em;
+	margin: 0 6px;
+}
+
+.Footer__copyright {
+	font-size: 0.6em;
+}
+
+Footer a:hover {
+	cursor: pointer;
+	color: #0040DD;
+}

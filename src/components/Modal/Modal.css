@@ -27,10 +27,10 @@
 							 2px -2px 0 #FFF,
 							 2px 2px 0 #FFF,
 							 -2px -2px 0 #FFF;
-	-webkit-transition: all 2s;
-	-moz-transition: all 2s;
-	-o-transition: all 2s;
-	transition: all 2s;
+	-webkit-transition: all 0s;
+	-moz-transition: all 0s;
+	-o-transition: all 0s;
+	transition: all 0s;
 }
 
 .t-hidden {
@@ -40,21 +40,20 @@
 .t-shown {
 	font-size: min(9vw, 72px);
 	z-index: 99;
+	-webkit-transition: all 2s;
+	-moz-transition: all 2s;
+	-o-transition: all 2s;
+	transition: all 2s;
 }
 
-.Modal__btn {
+.Modal__btn-div {
 	position: absolute;
 	top: calc(30vh + 1.5 * min(9vw, 72px));
-	font-size: max(min(3vw, 2vh), 10px);
-	margin-top: 10px;
-	padding: 3px 10px;
-	border: 1px solid #0040DD;
-	color: #0040DD;
-	border-radius: 15px;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+	margin: 10px;
+	-webkit-transition: all 0s;
+	-moz-transition: all 0s;
+	-o-transition: all 0s;
+	transition: all 0s;
 }
 
 .b-hidden {
@@ -69,6 +68,19 @@
 	-webkit-transform: translateY(0px);
 	transform: translateY(0px);
 	z-index: 100;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.Modal__btn {
+	font-size: max(min(3vw, 2vh), 10px);
+	margin: 5px 5px;
+	padding: 3px 10px;
+	border: 1px solid #0040DD;
+	color: #0040DD;
+	border-radius: 15px;
 }
 
 .Modal__btn:hover {
