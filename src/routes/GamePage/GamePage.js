@@ -46,9 +46,9 @@ export default class GamePage extends Component {
 				console.error(res.error);
 			});
 
-		document.addEventListener('keydown', this.onPressKeyboardDigit, false);
+		document.addEventListener('keydown', this.onKeyDown, false);
 		document.addEventListener('click', this.onClickElsewhere, true);
-		window.addEventListener('beforeunload', this.updateRecordDuration);
+		window.addEventListener('beforeunload', this.postRecordDuration);
 		this.addDuration = window.setInterval(() => {
 			this.setState({ duration: this.state.duration.add(1000)});
 		}, 1000);
@@ -57,12 +57,12 @@ export default class GamePage extends Component {
 	componentWillUnmount() {
 		clearInterval(this.updateDuration);
 		clearInterval(this.addDuration);
-		document.removeEventListener('keydown', this.onPressKeyboardDigit, false);
+		document.removeEventListener('keydown', this.onKeyDown, false);
 		document.removeEventListener('click', this.onClickElsewhere, true);
-		this.updateRecordDuration();
+		this.postRecordDuration();
 	}
 
-	onPressKeyboardDigit = e => {
+	onKeyDown = e => {
 		const k = e.keyCode;
 		// input number 1 to 9
 		if (k >= 49 && k <= 57) {
@@ -70,6 +70,7 @@ export default class GamePage extends Component {
 		}
 		// input arrow movement
 		else if (k >= 37 && k <= 40) {
+			e.preventDefault();
 			const { select } = this.state;
 			let r = Math.floor(select / 9);
 			let c = select % 9;
@@ -97,7 +98,7 @@ export default class GamePage extends Component {
 
 		const cell = state[select];
 
-		// stores current cell values
+		// stores current cell values as the 'before' step
 		const steps = [
 			{
 				cell_id: select,
@@ -109,13 +110,14 @@ export default class GamePage extends Component {
 			}
 		];
 
+		// gets updated cell values
 		const newValue = memoMode || value === cell.value ? null : value;
 		const newMemos = cell.memos.map((m, i) => {
 			if (!memoMode) return false;
 			return (i === value - 1) ? !m : m;
 		});
 
-		// stores updated cell values
+		// stores updated cell values as the 'after' step
 		steps.push({
 			cell_id: select,
 			record_id: steps[0].record_id,
@@ -166,7 +168,7 @@ export default class GamePage extends Component {
 
 	onClickNewGame = () => { this.props.history.push('/new'); }
 
-	updateRecordDuration = () => {
+	postRecordDuration = () => {
 		RecordsApiService.updateRecord(
 			this.props.match.params.record_id,
 			{ duration: this.state.duration.as('seconds') }
@@ -217,6 +219,7 @@ export default class GamePage extends Component {
 		}
 	}
 
+	/* cell is in the same row, column or block as the selected cell */
 	isRelativeCell(cell, select) {
 		if (Math.floor(cell / 9) === Math.floor(select / 9)) { return true; }
 		if (cell % 9 === select % 9) { return true; }
@@ -376,14 +379,14 @@ export default class GamePage extends Component {
 				<div className='GamePage__panel col'>
 					{this.renderButtons()}
 					{this.renderDigits()}
-					{memoMode && (
+					{
 						<div className='GamePage__note'>
-							Allow multiple numbers in cells
+							{(memoMode) ? 'Allow multiple numbers in cells' : ''}
 						</div>
-					)}
+					}
 				</div>
 				<div className='GamePage__intro'>
-					<h2>HOW TO PLAY</h2>
+					<h1>HOW TO PLAY</h1>
 					<p>
 						Sudoku is a popular Japanese puzzle game based on the logical placement 
 						of digits from 1 to 9.

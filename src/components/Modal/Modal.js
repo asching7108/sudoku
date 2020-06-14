@@ -31,17 +31,17 @@ export default class Modal extends Component {
 		return (
 			<>
 				<div className={`Modal__overlay ${(showButton) ? 'ol-shown' : 'ol-hidden'}`} />
-					<h2 className={`Modal__text ${(showModal) ? 't-shown' : 't-hidden'}`}>
-						Congratulations!
-					</h2>
-					<ButtonsDiv className={`Modal__btn-div ${(showButton) ? 'b-shown' : 'b-hidden'}`}>
-						<button className='Modal__btn' onClick={this.onClickStay}>
-							Stay on Page
-						</button>
-						<button className='Modal__btn' onClick={this.props.onClickNewGame}>
-							New Game
-						</button>
-					</ButtonsDiv>
+				<h2 className={`Modal__text ${(showModal) ? 't-shown' : 't-hidden'}`}>
+					Congratulations!
+				</h2>
+				<ButtonsDiv className={`Modal__btn-div ${(showButton) ? 'b-shown' : 'b-hidden'}`}>
+					<button className='Modal__btn' onClick={this.onClickStay}>
+						Stay on Page
+					</button>
+					<button className='Modal__btn' onClick={this.props.onClickNewGame}>
+						New Game
+					</button>
+				</ButtonsDiv>
 			</>
 		);
 	}

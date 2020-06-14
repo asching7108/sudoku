@@ -9,6 +9,7 @@
 .NewGamePage__btn {
 	width: 80vw;
 	margin: 0.2vh;
+	background-color: #FFF;
 	color: #0040DD;
 	font-size: 1em;
 	font-weight: 600;

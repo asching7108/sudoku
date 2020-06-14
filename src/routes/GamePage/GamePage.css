@@ -82,6 +82,7 @@
 
 .GamePage__undo,
 .GamePage__redo {
+	background-color: #FFF;
 	color: #636366;
 	font-size: max(min(3vw, 2vh), 10px);
 	font-weight: 600;
@@ -162,7 +163,8 @@
 }
 
 .GamePage__note {
-	margin: min(4.5vw, 3vh);
+	height: min(9vw, 6vh);
+	padding-top: min(3vw, 2vh);
 	font-size: max(min(2.4vw, 1.6vh), 10px);
 	color: #636366;
 }
@@ -189,7 +191,7 @@
 	line-height: 1.2em;
 }
 
-.GamePage__intro h2 {
+.GamePage__intro h1 {
 	text-align: center;
 	font-size: min(4.5vw, 3vh);
 	color: #0040DD;
