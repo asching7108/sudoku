@@ -12,10 +12,10 @@ export default function Footer() {
 				</a>
 			</p>
 			<div>
-				<a href="https://github.com/asching7108/sudoku-client/" target="_blank" rel="noopener noreferrer" className='Footer__icon'>
+				<a href="https://github.com/asching7108/sudoku-client/" target="_blank" rel="noopener noreferrer" className='Footer__icon' aria-label="link to github repo">
 					<FontAwesomeIcon icon={['fab', 'github']} />
 				</a>
-				<a href='http://www.linkedin.com/in/esther-lin-tw/' target='_blank' rel="noopener noreferrer" className='Footer__icon'>
+				<a href='http://www.linkedin.com/in/esther-lin-tw/' target='_blank' rel="noopener noreferrer" className='Footer__icon' aria-label="link to linkedIn profile">
 					<FontAwesomeIcon icon={['fab', 'linkedin']} />
 				</a>
 			</div>

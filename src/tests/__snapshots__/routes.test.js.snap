@@ -5322,13 +5322,16 @@ exports[`GamePage Component renders the UI as expected 1`] = `
         9
       </button>
     </div>
+    <div
+      className="GamePage__note"
+    />
   </div>
   <div
     className="GamePage__intro"
   >
-    <h2>
+    <h1>
       HOW TO PLAY
-    </h2>
+    </h1>
     <p>
       Sudoku is a popular Japanese puzzle game based on the logical placement of digits from 1 to 9.
     </p>
